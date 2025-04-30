@@ -44,7 +44,7 @@ all procedures will be conducted by using Azure CLI.
 The current architecture can be described as follows:
 
 
-<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-scrap-no-integration-plain-aks.jpg" width="600">
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-scrap-no-integration-plain-aks.jpg" width="900">
 
 ## 1.3 Deployment
 
@@ -92,7 +92,7 @@ az ad group create --display-name $OPS_BE_GROUP --mail-nickname $OPS_BE_GROUP
 
 Current architecture can now be described as follows:
 
-<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-create-user-groups.jpg" width="600">
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-create-user-groups.jpg" width="900">
 
 
 ### 1.3.3 Integrate AKS with Microsoft Entra ID
@@ -105,7 +105,7 @@ az aks update -g $SPOKE_RG -n $AKS_CLUSTER_NAME-${STUDENT_NAME}  --enable-azure-
 
 Current architecture can now be described as follows:
 
-![Screenshot](images/AAD-integration-disabled-local-account-aad-enabled-azurerbacenabled.jpg)
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-disabled-local-account-aad-enabled-azurerbacenabled.jpg" width="900">
 
 ### 1.3.4 Scope and Role Assignment for Security Groups
 This chapter will explain how to create the scope for the operation teams to perform their daily tasks. The scope is based on the AKS resource ID and a fixed path in AKS, which is **/namespaces/<NAMESPACE>**. The scope will assign the **Application Operations Frontend Team** to the **frontend namespace** and the **Application Operation Backend Team** to the **backend namespace**.
