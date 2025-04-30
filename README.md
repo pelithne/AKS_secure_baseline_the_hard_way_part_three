@@ -39,13 +39,12 @@ Throughout this article, this is the target architecture we will aim to create:
 all procedures will be conducted by using Azure CLI.
 
 
-![Screenshot](images/aad-targetarchitecture.jpg)
-
 <img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/aad-targetarchitecture.jpg" width="900">
 
 The current architecture can be described as follows:
 
-![Screenshot](images/AAD-integration-scrap-no-integration-plain-aks.jpg)
+
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-scrap-no-integration-plain-aks.jpg" width="600">
 
 ## 1.3 Deployment
 
@@ -93,7 +92,7 @@ az ad group create --display-name $OPS_BE_GROUP --mail-nickname $OPS_BE_GROUP
 
 Current architecture can now be described as follows:
 
-![Screenshot](images/AAD-integration-create-user-groups.jpg)
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-create-user-groups.jpg" width="600">
 
 
 ### 1.3.3 Integrate AKS with Microsoft Entra ID
