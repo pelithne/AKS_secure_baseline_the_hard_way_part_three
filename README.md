@@ -9,7 +9,7 @@ By following this tutorial, you will be able to implement the least privilege ac
 
 ## 1.1 Introduction
 
-In this the third part of this blog series, you will learn how to:
+In this third part of the blog series, you will learn how to:
 
 - Harden your AKS cluster.
 - Update an existing AKS cluster to support Microsoft Entra ID integration enabled.
@@ -23,7 +23,7 @@ In this the third part of this blog series, you will learn how to:
 ## 1.2 Prequisities:
 This section outlines the recommended prerequisites for setting up Microsoft entra ID with AKS.
 
-highly recommended to complete Azure Kubernetes Service Baseline - The Hard Way <a href="https://techcommunity.microsoft.com/blog/appsonazureblog/azure-kubernetes-service-baseline---the-hard-way/4130496">here!</a>
+Highly recommended to complete Azure Kubernetes Service Baseline - The Hard Way <a href="https://techcommunity.microsoft.com/blog/appsonazureblog/azure-kubernetes-service-baseline---the-hard-way/4130496">here!</a>
 
 
 ## 1.3 Target Architecture
