@@ -20,7 +20,13 @@ In this the third part of this blog series, you will learn how to:
 - Create role bindings to grant access to the backend ops group and the frontend ops group to their respective namespaces.
 - Test the access of each user type by logging in with different credentials and running kubectl commands.
 
-## 1.2 Target Architecture
+## 1.2 Prequisities:
+This section outlines the recommended prerequisites for setting up Microsoft entra ID with AKS.
+
+highly recommended to complete Azure Kubernetes Service Baseline - The Hard Way <a href="https://techcommunity.microsoft.com/blog/appsonazureblog/azure-kubernetes-service-baseline---the-hard-way/4130496">here!</a>
+
+
+## 1.3 Target Architecture
 
 Throughout this article, this is the target architecture we will aim to create:
 all procedures will be conducted by using Azure CLI.
@@ -33,9 +39,9 @@ The current architecture can be described as follows:
 
 <img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-scrap-no-integration-plain-aks.jpg" width="900">
 
-## 1.3 Deployment
+## 1.4 Deployment
 
-### 1.3.1 Prepare Environment Variables
+### 1.4.1 Prepare Environment Variables
 This code defines the environment variables for the resources that you will create later in the tutorial.
 
 > [!Note]
@@ -59,7 +65,7 @@ AAD_ADMIN_UPN='clusteradmin'${STUDENT_NAME}'@MngEnvMCAP148390.onmicrosoft.com'
 AAD_ADMIN_PW=<ENTER USER PASSWORD>
 AAD_ADMIN_DISPLAY_NAME='Admin-'${STUDENT_NAME}
 ````
-### 1.3.2 Create Microsoft Entra ID Security Groups 
+### 1.4.2 Create Microsoft Entra ID Security Groups 
 
 We will now start by creating 3 security groups for respective team.
 
@@ -82,7 +88,7 @@ Current architecture can now be described as follows:
 <img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-create-user-groups.jpg" width="900">
 
 
-### 1.3.3 Integrate AKS with Microsoft Entra ID
+### 1.4.3 Integrate AKS with Microsoft Entra ID
 
 1) Lets update our existing AKS cluster to support Microsoft Entra ID integration, and configure a cluster admin group, and disable local admin accounts in AKS, as this will prevent anyone from using the **--admin** switch to get full cluster credentials.
 
@@ -94,7 +100,7 @@ Current architecture can now be described as follows:
 
 <img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-disabled-local-account-aad-enabled-azurerbacenabled.jpg" width="900">
 
-### 1.3.4 Scope and Role Assignment for Security Groups
+### 1.4.4 Scope and Role Assignment for Security Groups
 This chapter will explain how to create the scope for the operation teams to perform their daily tasks. The scope is based on the AKS resource ID and a fixed path in AKS, which is **/namespaces/<NAMESPACE>**. The scope will assign the **Application Operations Frontend Team** to the **frontend namespace** and the **Application Operation Backend Team** to the **backend namespace**.
 
 
@@ -148,7 +154,7 @@ Current architecture can now be described as follows:
 
 <img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-role-assignment.jpg" width="900">
 
-### 1.3.5 Create Users and Assign them to Security Groups.
+### 1.4.5 Create Users and Assign them to Security Groups.
 This exercise will guide you through the steps of creating three users and adding them to their corresponding security groups.
 
 1) Create the Admin user.
@@ -247,7 +253,7 @@ Validate your deployment in the Azure portal.
 
 17) On the top menu bar click on **Contoso | Groups** link. Repeat step 13 - 16 for **Ops_Frontend_team-YOUR STUDENT NAME** and **ClusterAdminGroup-YOUR STUDENT NAME**
 
-### 1.3.6 Validate the Access for the Different Users.
+### 1.4.6 Validate the Access for the Different Users.
 
 This section will demonstrate how to connect to the AKS cluster from the jumpbox using the user account defined in Microsoft Entra ID. We will check two things: first, that we can successfully connect to the cluster; and second, that the Operations teams have access only to their own namespaces, while the Admin has full access to the cluster.
 
