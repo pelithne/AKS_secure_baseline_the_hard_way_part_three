@@ -41,7 +41,7 @@ all procedures will be conducted by using Azure CLI.
 
 ![Screenshot](images/aad-targetarchitecture.jpg)
 
-<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/aad-targetarchitecture.jpg" width="800">
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/aad-targetarchitecture.jpg" width="900">
 
 The current architecture can be described as follows:
 
