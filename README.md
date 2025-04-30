@@ -21,7 +21,7 @@ In this third part of the blog series, you will learn how to:
 - Test the access of each user type by logging in with different credentials and running kubectl commands.
 
 ## 1.2 Prequisities:
-It is highly recommended to complete Azure Kubernetes Service Baseline - The Hard Way <a href="https://techcommunity.microsoft.com/blog/appsonazureblog/azure-kubernetes-service-baseline---the-hard-way/4130496">here!</a> before starting with this tutorial. If you don't, you will have to set up Kubernetes cluster, and you will most likely have to do some additional troubleshooting.
+It is highly recommended to complete Azure Kubernetes Service Baseline - The Hard Way <a href="https://techcommunity.microsoft.com/blog/appsonazureblog/azure-kubernetes-service-baseline---the-hard-way/4130496">here</a> before starting with this tutorial. If you don't, you will have to set up your own Kubernetes cluster, and you will most likely have to do some additional troubleshooting.
 
 
 ## 1.3 Target Architecture
