@@ -159,7 +159,7 @@ az role assignment create --assignee $ADMIN_GROUP_OBJECT_ID --role "Azure Kubern
 
 Current architecture can now be described as follows:
 
-![Screenshot](images/AAD-integration-role-assignment.jpg)
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/AAD-integration-role-assignment.jpg" width="900">
 
 ### 1.3.5 Create Users and Assign them to Security Groups.
 This exercise will guide you through the steps of creating three users and adding them to their corresponding security groups.
@@ -218,7 +218,8 @@ az ad group member add --group $OPS_BE_GROUP --member-id $BE_USER_OBJECT_ID
 ````
 Current architecture can now be described as follows:
 
-![Screenshot](images/withuserad.jpg)
+
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/withuserad.jpg" width="900">
 
 Validate your deployment in the Azure portal.
 
@@ -232,7 +233,9 @@ Validate your deployment in the Azure portal.
     
 11) Validate that your users are created, there shall be **three users**, each user name shall end with your student name.
 
-![Screenshot](images/users.jpg)
+
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/users.jpg" width="900">
+
 
 > [!Note]
 > In the workshop tenant their may be more users configured, ensure you identify your three users which ends with your student name.
@@ -242,17 +245,18 @@ Validate your deployment in the Azure portal.
 
 13) On your left hand side menu under **Manage** click on **Groups**. Ensure you have three groups as depicted in the picture, the group names should end with your student name.
 
-![Screenshot](images/groups.jpg)
+
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/groups.jpg" width="900">
 
 14) Click on security group called **Ops_Backend_team-YOUR STUDENT NAME**.
     
 15) On your left hand side menu click on **Members**, verify that your user Backend-YOUR STUDENT NAME is assigned. 
 
-![Screenshot](images/assigneduser.jpg)
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/assigneduser.jpg" width="900">
 
 16) On your left hand side menu click on **Azure role Assignments**, from the drop down menu select your subscription. Ensure the following roles are assigned to the group: **Azure Kubernetes service Cluster User Role** assigned on the Cluster level and **Azure Kubernetes Service RBAC Writer** assigned on the namespace level called **backend**.
 
-![Screenshot](images/roleassignment.jpg)
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/roleassignment.jpg" width="900">
 
 17) On the top menu bar click on **Contoso | Groups** link. Repeat step 13 - 16 for **Ops_Frontend_team-YOUR STUDENT NAME** and **ClusterAdminGroup-YOUR STUDENT NAME**
 
@@ -307,7 +311,7 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 ````
 9) Open a new tab in your web browser and access https://microsoft.com/devicelogin. Enter the generated **code**, and press ***Next**
 
-![Screenshot](images/devicecodelogin.jpg)
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/devicecodelogin.jpg" width="900">
 
 
 10) You will be prompted with an authentication window asking which user you want to login with select **Use another account** and supply the username in the **AAD_OPS_FE_UPN** variable and password from variable **AAD_OPS_FE_PW** And then press **Next**.
@@ -315,8 +319,7 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 > [!Note]
 > When you authenticate with a user for the first time, you will be prompted by Microsoft Authenticator to set up Multi-Factor Authentication (MFA). Choose **"I want to setup a different method"** option from the drop-down menu, and select **Phone**, supply your phone number, and receive a one-time passcode to authenticate to Azure with your user account.
 
-![Screenshot](images/ADlogin.jpg)
-
+<img src="https://raw.githubusercontent.com/pelithne/AKS_secure_baseline_the_hard_way_part_three/main/images/ADlogin.jpg" width="900">
   
 
 11) From the **Jumpbox VM** download AKS cluster credential.
