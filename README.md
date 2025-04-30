@@ -1,17 +1,4 @@
-# # Access management
-
-**In This Article:**
-- [Access management](#access-management)
-  - [1.1 Introduction](#11-introduction)
-  - [1.2 Target Architecture](#12-target-architecture)
-  - [1.3 Deployment](#13-deployment)
-    - [1.3.1 Prepare Environment Variables](#131-prepare-environment-variables)
-    - [1.3.2 Create Microsoft Entra ID Security Groups](#132-create-microsoft-entra-id-security-groups)
-    - [1.3.3 Integrate AKS with Microsoft Entra ID](#133-integrate-aks-with-microsoft-entra-id)
-    - [1.3.4 Scope and Role Assignment for Security Groups](#134-scope-and-role-assignment-for-security-groups)
-    - [1.3.5 Create Users and Assign them to Security Groups.](#135-create-users-and-assign-them-to-security-groups)
-    - [1.3.6 Validate the Access for the Different Users.](#136-validate-the-access-for-the-different-users)
-
+#  Access management
 
 Azure Kubernetes Service (AKS) supports Microsoft Entra ID integration, which allows you to control access to your cluster resources using Azure role-based access control (RBAC). In this tutorial, you will learn how to integrate AKS with Microsoft Entra ID and assign different roles and permissions to three types of users:
 
@@ -22,7 +9,7 @@ By following this tutorial, you will be able to implement the least privilege ac
 
 ## 1.1 Introduction
 
-In this section, you will learn how to:
+In this the third part of this blog series, you will learn how to:
 
 - Harden your AKS cluster.
 - Update an existing AKS cluster to support Microsoft Entra ID integration enabled.
